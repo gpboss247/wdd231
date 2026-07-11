@@ -1,0 +1,76 @@
+{
+  "members": [
+    {
+      "name": "Dangote Industries Ltd",
+      "address": "1 Alfred Rewane Road, Ikoyi, Lagos",
+      "phone": "234-01-200-0000",
+      "website": "https://www.dangote.com",
+      "image": "dangote.png",
+      "membership": 3,
+      "tagline": "Conglomerate & Manufacturing"
+    },
+    {
+      "name": "GTBank Financial Services",
+      "address": "635 Akin Adesola Street, Victoria Island, Lagos",
+      "phone": "234-01-448-0000",
+      "website": "https://www.gtbank.com",
+      "image": "gtbank.png",
+      "membership": 3,
+      "tagline": "Banking & Finance"
+    },
+    {
+      "name": "Eko Hotels & Suites",
+      "address": "1415 Adetokunbo Ademola Street, Victoria Island, Lagos",
+      "phone": "234-01-262-0000",
+      "website": "https://www.ekohotels.com",
+      "image": "ekohotels.png",
+      "membership": 3,
+      "tagline": "Hospitality & Tourism"
+    },
+    {
+      "name": "Jumia Nigeria",
+      "address": "Musa Yar'Adua Street, Victoria Island, Lagos",
+      "phone": "234-01-700-0000",
+      "website": "https://www.jumia.com.ng",
+      "image": "jumia.png",
+      "membership": 2,
+      "tagline": "E-Commerce & Retail"
+    },
+    {
+      "name": "Lagos Chambers Law Firm",
+      "address": "24 Bode Thomas Street, Surulere, Lagos",
+      "phone": "234-01-300-1100",
+      "website": "https://www.lagoschamberslaw.ng",
+      "image": "lagoslaw.png",
+      "membership": 2,
+      "tagline": "Legal & Advisory Services"
+    },
+    {
+      "name": "Naija Tech Hub",
+      "address": "12 Admiralty Way, Lekki Phase 1, Lagos",
+      "phone": "234-08-0700-0001",
+      "website": "https://www.naijatechhub.ng",
+      "image": "naijatech.png",
+      "membership": 2,
+      "tagline": "Technology & Innovation"
+    },
+    {
+      "name": "Lekki Free Zone Authority",
+      "address": "Lekki-Epe Expressway, Ibeju-Lekki, Lagos",
+      "phone": "234-01-270-0000",
+      "website": "https://www.lfzea.com",
+      "image": "lekkifz.png",
+      "membership": 1,
+      "tagline": "Trade & Economic Zones"
+    },
+    {
+      "name": "Farmcrowdy Agriculture",
+      "address": "9 Ademola Adetokunbo Crescent, Wuse II, Lagos",
+      "phone": "234-08-0800-0002",
+      "website": "https://www.farmcrowdy.com",
+      "image": "farmcrowdy.png",
+      "membership": 1,
+      "tagline": "AgriTech & Food Security"
+    }
+  ]
+}

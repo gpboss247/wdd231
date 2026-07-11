@@ -1,0 +1,148 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy:    #0F1B2D;
+  --navy-2:  #17263D;
+  --amber:   #E8A33D;
+  --teal:    #2C6E68;
+  --bg:      #F5F3EE;
+  --card:    #FFFFFF;
+  --text:    #1B1F23;
+  --muted:   #5C6570;
+  --border:  #DDD7C9;
+
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
+
+  --radius: 10px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--navy);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  border-bottom: 3px solid var(--amber);
+}
+
+header h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: #fff;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  letter-spacing: -0.01em;
+}
+
+/* ── MAIN / CARD GRID ── */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+#cards section {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+}
+
+#cards section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(15,27,45,0.12);
+}
+
+#cards section::before {
+  content: attr(data-order);
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  background: var(--navy);
+  color: var(--amber);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+#cards img {
+  width: 100%;
+  aspect-ratio: 340 / 440;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+
+#cards h2 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy);
+  padding: 0.85rem 1rem 0.25rem;
+}
+
+#cards .prophet-detail {
+  padding: 0 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: flex;
+  gap: 0.4rem;
+}
+
+#cards .prophet-detail:last-of-type {
+  padding-bottom: 1rem;
+}
+
+#cards .detail-label {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+
+footer {
+  background: var(--navy);
+  color: #cfd6de;
+  padding: 1.25rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  border-top: 3px solid var(--amber);
+}

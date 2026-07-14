@@ -1,6 +1,6 @@
 // directory.js
 // Fetches chamber member data from members.json and renders it as
-// a card grid or a one column list, based on the user selection.
+// either a card grid or a one column list, based on user selection.
 
 const url = 'data/members.json';
 const directoryContainer = document.getElementById('directory-container');
@@ -27,7 +27,7 @@ function displayMembers(members, view) {
   directoryContainer.innerHTML = members.map((member) => `
     <div class="biz-card">
       <div class="card-top">
-        <img class="biz-logo" src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="54" height="54">
+        ${view === 'grid' ? `<img class="biz-logo" src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="54" height="54">` : ''}
         <div class="biz-header">
           <div class="biz-name">${member.name}</div>
           <div class="biz-tagline">${member.tagline}</div>

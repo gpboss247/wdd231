@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Directory | Lagos Chamber of Commerce</title>
-  <meta name="description" content="Browse member businesses of the Lagos Chamber of Commerce, a resource hub connecting local businesses, patrons, and organizations across Lagos, Nigeria.">
+  <title>Home | Lagos Chamber of Commerce</title>
+  <meta name="description" content="The Lagos Chamber of Commerce connects local businesses across Lagos, Nigeria, with networking opportunities, resources, and community events.">
   <meta name="author" content="Onaimor Godspower">
 
   <link rel="icon" href="images/favicon.ico">
 
   <!-- Facebook Open Graph -->
-  <meta property="og:title" content="Lagos Chamber of Commerce – Business Directory">
-  <meta property="og:description" content="Browse member businesses of the Lagos Chamber of Commerce, a resource hub connecting local businesses, patrons, and organizations across Lagos, Nigeria.">
+  <meta property="og:title" content="Lagos Chamber of Commerce">
+  <meta property="og:description" content="Connecting businesses across Lagos, Nigeria, with networking opportunities, resources, and community events.">
   <meta property="og:image" content="https://gpboss247.github.io/wdd231/chamber/images/og-image.png">
-  <meta property="og:url" content="https://gpboss247.github.io/wdd231/chamber/directory.html">
+  <meta property="og:url" content="https://gpboss247.github.io/wdd231/chamber/index.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
 
@@ -28,7 +28,8 @@
   <script src="scripts/theme.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
-  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
 </head>
 <body>
 
@@ -43,8 +44,8 @@
       </div>
 
       <nav id="primary-nav">
-        <a href="index.html">Home</a>
-        <a href="directory.html" class="active">Directory</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="directory.html">Directory</a>
         <a href="join.html">Join</a>
         <a href="discover.html">Discover</a>
       </nav>
@@ -68,22 +69,60 @@
   </header>
 
   <main>
-    <div class="page-band">
-      <h1>Business Directory</h1>
-      <p>Connecting businesses across Lagos State and beyond</p>
-    </div>
 
-    <div class="controls">
-      <div class="view-toggle">
-        <button id="btn-grid" class="active" type="button">Grid</button>
-        <button id="btn-list" type="button">List</button>
+    <!-- HERO -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Lagos city skyline" class="hero-image" width="1200" height="480">
+      <div class="hero-overlay">
+        <h1>Grow Your Business in Lagos</h1>
+        <p>Connecting local businesses, patrons, and organizations across Lagos State.</p>
+        <a href="join.html" class="cta-button">Join the Chamber</a>
       </div>
-      <span class="result-count" id="result-count"></span>
-    </div>
-
-    <section class="directory">
-      <div class="biz-grid" id="directory-container"></div>
     </section>
+
+    <!-- CURRENT EVENTS -->
+    <section class="events" aria-labelledby="events-heading">
+      <h2 id="events-heading">Upcoming Events</h2>
+      <div class="events-grid">
+        <div class="event-card">
+          <span class="event-date">Aug 14</span>
+          <h3>Lagos Business Networking Mixer</h3>
+          <p>An evening of networking, refreshments, and introductions with fellow chamber members at Eko Hotels & Suites.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-date">Aug 28</span>
+          <h3>SME Growth & Funding Workshop</h3>
+          <p>A half-day workshop covering access to finance, grant applications, and growth strategy for small businesses.</p>
+        </div>
+        <div class="event-card">
+          <span class="event-date">Sep 05</span>
+          <h3>Lagos Trade & Export Forum</h3>
+          <p>Panel discussions on export opportunities within the Lekki Free Zone and beyond, with Q&A from local exporters.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEATHER -->
+    <section class="weather" aria-labelledby="weather-heading">
+      <h2 id="weather-heading">Lagos Weather</h2>
+      <div class="weather-panel">
+        <div class="weather-current" id="weather-current">
+          <img id="current-icon" class="weather-icon" alt="" width="64" height="64">
+          <div>
+            <span class="current-temp" id="current-temp">--</span>
+            <span class="current-desc" id="current-desc">Loading forecast…</span>
+          </div>
+        </div>
+        <div class="forecast-container" id="forecast-container"></div>
+      </div>
+    </section>
+
+    <!-- MEMBER SPOTLIGHTS -->
+    <section class="spotlights" aria-labelledby="spotlights-heading">
+      <h2 id="spotlights-heading">Member Spotlights</h2>
+      <div class="spotlights-grid" id="spotlights-container"></div>
+    </section>
+
   </main>
 
   <footer>

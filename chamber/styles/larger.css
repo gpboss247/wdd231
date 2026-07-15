@@ -1,4 +1,6 @@
-
+/* ============================================
+   larger.css — enhancements for wider viewports
+   ============================================ */
 
 @media screen and (min-width: 700px) {
 
@@ -40,6 +42,34 @@
   .footer-socials { justify-content: flex-start; }
 
   .footer-meta { text-align: right; }
+
+  /* ── HOME PAGE ── */
+  .hero-image { height: 420px; }
+
+  .hero-overlay { align-items: flex-start; text-align: left; padding: 3rem; }
+
+  .hero-overlay h1 { font-size: 2.6rem; }
+  .hero-overlay p { font-size: 1.05rem; max-width: 40ch; }
+
+  .events, .weather, .spotlights { padding: 2.5rem 2rem; }
+
+  .events-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .weather-panel { flex-direction: row; align-items: stretch; }
+
+  .weather-current {
+    flex: 1;
+    border-right: 1px solid var(--border);
+    padding-right: 1.5rem;
+  }
+
+  .forecast-container {
+    flex: 2;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .spotlights-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1099px) {

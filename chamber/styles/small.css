@@ -1,4 +1,6 @@
-
+/* ============================================
+   small.css — base / mobile-first styles (320px+)
+  ============================================ */
 
 :root {
   --green:      #0A5C36;
@@ -10,11 +12,25 @@
   --text:       #1B1F23;
   --muted:      #5C6570;
   --border:     #DDD7C9;
+  --accent:     #0A5C36;
 
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
 
   --radius: 10px;
+}
+
+html[data-theme="dark"] {
+  --bg:      #10151A;
+  --card:    #1B2229;
+  --text:    #EDEFEC;
+  --muted:   #9AA7B0;
+  --border:  #2A333B;
+  --accent:  #34A868;
+}
+
+body {
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 html {
@@ -88,6 +104,37 @@ header {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
+/* Header actions (theme toggle + hamburger) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-toggle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+
+html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
 /* Hamburger */
 .hamburger {
@@ -234,7 +281,7 @@ main {
   gap: 0.7rem;
   position: relative;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.25s ease;
 }
 
 .biz-card::before {
@@ -251,7 +298,7 @@ main {
 .biz-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 22px rgba(10,92,54,0.12);
-  border-color: var(--green);
+  border-color: var(--accent);
 }
 
 .biz-card:hover::before { transform: scaleY(1); }
@@ -308,7 +355,7 @@ main {
   color: var(--muted);
 }
 
-.biz-info a { color: var(--green); }
+.biz-info a { color: var(--accent); }
 .biz-info a:hover { text-decoration: underline; }
 
 .info-row { display: flex; align-items: flex-start; gap: 0.4rem; }
@@ -370,6 +417,235 @@ footer {
 }
 
 .footer-meta span { color: #fff; }
+
+/* ── HOME: HERO ── */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7,66,37,0.35) 0%, rgba(7,66,37,0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+}
+
+.hero-overlay h1 {
+  color: #fff;
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  line-height: 1.25;
+  max-width: 22ch;
+}
+
+.hero-overlay p {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+  max-width: 32ch;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1.1rem;
+  background: var(--gold);
+  color: var(--green-dark);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 30px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+/* ── HOME: SHARED SECTION WRAPPER ── */
+.events, .weather, .spotlights {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+.events h2, .weather h2, .spotlights h2 {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+/* ── HOME: EVENTS ── */
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.event-card {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem;
+  transition: background-color 0.25s ease, border-color 0.2s ease;
+}
+
+.event-date {
+  display: inline-block;
+  background: var(--green);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.event-card h3 {
+  font-size: 0.98rem;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.event-card p {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ── HOME: WEATHER ── */
+.weather-panel {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  transition: background-color 0.25s ease, border-color 0.2s ease;
+}
+
+.weather-current {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.weather-icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.current-temp {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.current-desc {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: capitalize;
+}
+
+.forecast-container {
+  display: flex;
+  gap: 0.75rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.forecast-day {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.forecast-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.forecast-temp {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.weather-error {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ── HOME: SPOTLIGHTS ── */
+.spotlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.spotlight-card {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.25s ease;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(10,92,54,0.12);
+}
+
+.spotlight-logo {
+  border-radius: 8px;
+  margin: 0 auto 0.6rem;
+}
+
+.spotlight-name {
+  font-size: 0.98rem;
+  color: var(--text);
+  margin: 0.5rem 0 0.35rem;
+}
+
+.spotlight-detail {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.15rem;
+}
+
+.spotlight-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.spotlight-link:hover { text-decoration: underline; }
 
 /* ── UTILITY ── */
 .hidden { display: none !important; }

@@ -566,6 +566,7 @@ footer {
   gap: 0.75rem;
   border-top: 1px solid var(--border);
   padding-top: 1rem;
+  min-height: 76px;
 }
 
 .forecast-day {
@@ -603,6 +604,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  min-height: 780px;
 }
 
 .spotlight-card {

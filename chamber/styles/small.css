@@ -1,5 +1,5 @@
 /* ============================================
-   small.css — base / mobile-first styles (320px+)
+   small.css — base / mobile-first styles (320px)
    Shared across all Chamber project pages.
    ============================================ */
 
@@ -51,7 +51,7 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
-/* ── HEADER ── */
+/* ── header ── */
 header {
   background: var(--green-dark);
   border-bottom: 3px solid var(--gold);
@@ -103,7 +103,7 @@ header {
   text-transform: uppercase;
 }
 
-/* Header actions (theme toggle + hamburger) */
+/* Header actions - theme toggle + hamburger */
 .header-actions {
   display: flex;
   align-items: center;
@@ -158,7 +158,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
 
-/* Nav (mobile dropdown) */
+/* Nav mobile dropdown */
 nav {
   display: none;
   flex-direction: column;
@@ -192,7 +192,7 @@ nav a.active {
   border-bottom: 2px solid var(--gold);
 }
 
-/* ── PAGE TITLE BAND ── */
+/* ── page title ── */
 .page-band {
   background-color: var(--green);
   background-image: linear-gradient(135deg, var(--green) 0%, #0d7a47 100%);
@@ -212,13 +212,13 @@ nav a.active {
   font-size: 0.88rem;
 }
 
-/* ── MAIN ── */
+/* ── Main ── */
 main {
   flex: 1;
   width: 100%;
 }
 
-/* ── DIRECTORY CONTROLS ── */
+/* ── directory controls ── */
 .controls {
   max-width: 1200px;
   margin: 1.5rem auto 0;
@@ -255,7 +255,7 @@ main {
   font-family: var(--font-mono);
 }
 
-/* ── DIRECTORY GRID / LIST ── */
+/* ── directory grid / list ── */
 .directory {
   max-width: 1200px;
   margin: 0 auto;
@@ -375,7 +375,7 @@ main {
 
 .biz-list .card-top { flex: 1 1 220px; }
 
-/* ── FOOTER ── */
+/* ── footer ── */
 footer {
   background: var(--green-dark);
   color: rgba(255,255,255,0.75);
@@ -416,7 +416,7 @@ footer {
 
 .footer-meta span { color: #fff; }
 
-/* ── HOME: HERO ── */
+/* ── home - hero ── */
 .hero {
   position: relative;
   overflow: hidden;
@@ -472,7 +472,7 @@ footer {
   transform: translateY(-2px);
 }
 
-/* ── HOME: SHARED SECTION WRAPPER ── */
+/* ── home - shared session ── */
 .events, .weather, .spotlights {
   max-width: 1200px;
   margin: 0 auto;
@@ -485,7 +485,7 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* ── HOME: EVENTS ── */
+/* ── home -- events ── */
 .events-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -523,7 +523,7 @@ footer {
   color: var(--muted);
 }
 
-/* ── HOME: WEATHER ── */
+/* ── home - weather ── */
 .weather-panel {
   background: var(--card);
   border: 1.5px solid var(--border);
@@ -599,7 +599,7 @@ footer {
   color: var(--muted);
 }
 
-/* ── HOME: SPOTLIGHTS ── */
+/* ── home - spotlights ── */
 .spotlights-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -648,5 +648,5 @@ footer {
 
 .spotlight-link:hover { text-decoration: underline; }
 
-/* ── UTILITY ── */
+/* ── utility ── */
 .hidden { display: none !important; }

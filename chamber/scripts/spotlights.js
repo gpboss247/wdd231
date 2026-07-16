@@ -1,6 +1,6 @@
 // spotlights.js
-// Fetches chamber member data and displays 2 - 3 randomly selected
-// gold or silver members as spotlight cards. Selection re-randomizes
+// Fetches chamber member data and displays 2-3 randomly selected
+// gold or silver members as spotlight cards. Selection re randomizes
 // on every page load.
 
 const membersUrl = 'data/members.json';
@@ -14,7 +14,7 @@ async function getSpotlights() {
     if (!response.ok) throw new Error('Member data request failed');
     const data = await response.json();
 
-    // Only gold 3 and silver 2 members are eligible for a spotlight.
+    // Only gold (3) and silver (2) members are eligible for a spotlight.
     const eligible = data.members.filter(
       (member) => member.membership === 2 || member.membership === 3
     );

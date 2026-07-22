@@ -1,6 +1,4 @@
-/* ============================================
-   small.css — base / mobile-first styles (320px+)
-   ============================================ */
+/* small.css — base / mobile first styles- 320px+ */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -56,7 +54,7 @@ h1, h2 {
   font-weight: 600;
 }
 
-/* ── HEADER ── */
+/* Header */
 header {
   background: var(--navy);
   padding: 0.9rem 1.25rem;
@@ -118,7 +116,7 @@ header {
   transform: translateY(-11px) rotate(-45deg);
 }
 
-/* Nav (mobile: hidden dropdown) */
+/*Nav --mobile hidden dropdown */
 nav {
   display: none;
   flex-direction: column;
@@ -139,7 +137,6 @@ nav.open {
 nav a {
   text-decoration: none;
   color: #cfd6de;
-  font-family: var(--font-mono);
   font-size: 0.9rem;
   padding: 0.6rem 0.25rem;
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -155,6 +152,7 @@ nav a::before {
   color: var(--amber);
   opacity: 0;
   transition: opacity 0.15s ease;
+  font-family: var(--font-mono);
 }
 
 nav a:hover::before,
@@ -240,10 +238,51 @@ section h2::before {
   margin: 0 auto;
   border-radius: var(--radius);
   border: 1px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-photo img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 10px 24px rgba(15, 27, 45, 0.18);
 }
 
 /* Courses */
 .courses h2 { margin-bottom: 1rem; }
+
+/* loading spinner, csas animation practice activity*/
+#loader {
+  position: relative;
+  margin: 0 0 1.25rem;
+  width: 42px;
+  height: 42px;
+  border: 5px solid transparent;
+  border-color: var(--amber) transparent var(--navy) transparent;
+  border-radius: 50%;
+  animation: spin 1.4s linear infinite;
+  box-shadow: 0 0 1rem rgba(232, 163, 61, 0.35);
+}
+
+#loader::after {
+  content: ">_";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--navy);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.25); }
+}
 
 .filter-buttons {
   display: flex;
@@ -293,6 +332,7 @@ section h2::before {
   gap: 0.4rem;
   position: relative;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
 }
 
 .course-card:hover {
@@ -350,7 +390,69 @@ section h2::before {
   font-weight: 600;
 }
 
-/* ── FOOTER ── */
+/* course details modals*/
+dialog#course-details {
+  border: 1px solid rgb(0 0 0 / 10%);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  background-color: var(--card);
+  box-shadow: 0 0 3rem rgba(0,0,0,0.35);
+  width: 90%;
+  max-width: 480px;
+  color: var(--text);
+}
+
+dialog#course-details::backdrop {
+  background-color: rgb(15 27 45 / 55%);
+}
+
+dialog#course-details h2 {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--navy);
+  margin-bottom: 0.2rem;
+}
+
+dialog#course-details h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 0.9rem;
+}
+
+dialog#course-details p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+  line-height: 1.55;
+}
+
+dialog#course-details p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+dialog#course-details button#closeModal {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+dialog#course-details button#closeModal:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+/* footer */
 footer {
   background: var(--navy);
   color: #cfd6de;
@@ -384,3 +486,15 @@ footer p {
 }
 
 footer p:last-child { margin-bottom: 0; }
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #loader,
+  #loader::after {
+    animation: none;
+  }
+
+  .student-photo img {
+    transition-duration: 0.01s;
+  }
+}

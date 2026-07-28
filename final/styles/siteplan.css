@@ -1,0 +1,231 @@
+/* Sitepan.css - Choplagos site plan  */
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+  --terracotta: #C1440E;
+  --charcoal:   #2B2320;
+  --gold:       #E8A93A;
+  --cream:      #FBF3E7;
+  --card:       #FFFFFF;
+  --border:     #E4D9C8;
+  
+  --font-heading:'Fraunces',serif;
+  --font-body: 'Karla',sans-serif; 
+}
+
+body{
+    font-family: var(--font-body);
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.65;
+}
+
+h1,h2{
+    font-family: var(--font-heading);
+    color: var(--terracotta);
+}
+
+/* header */
+header{
+    background: var(--terracotta);
+    color: var(--cream);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+
+header h1{
+    color: #FFFFFF;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    margin: 0.4rem 0;
+}
+
+.eyebrow{
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.7rem;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.subtitle{
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+}
+
+/* main */
+main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+section h2{
+    font-size: 1.5rem;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--gold);
+    display: inline-block;
+}
+
+section p{
+    margin-bottom: 0.75rem;
+}
+
+.site-name-display{
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--terracotta);
+}
+
+.domain-note{
+    font-size: 0.9rem;
+    color: #5c4f45;
+}
+
+/* scenarios */
+.scenario-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.scenario-list li{
+    background: var(--card);
+    border-left: 4px solid var(--gold);
+    border-radius: 6px;
+    padding: 0.9rem 1rem;
+    font-style: italic;
+}
+
+/* color swatches */
+.swatch-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
+.swatch{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.swatch-color{
+    display: block;
+    width: 100%;
+    height: 60px;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+}
+
+.swatch-color-bordered{
+    border: 1px solid var(--border);
+}
+
+.swatch-use{
+    font-size: 0.85rem;
+    color: #5c4f45;
+}
+
+/* Typography Samples */
+.type-sample{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.type-sample:last-child{margin-top: 0;}
+
+.type-label{
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--terracotta);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.type-demo-heading{
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--charcoal);
+}
+
+/* wireframes */
+.wireframes{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.wireframe-label{
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: var(--charcoal);
+}
+
+.wf-mobile, .wf-desktop{
+    background: #FFFFFF;
+    border: 2px solid #000;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.wf-mobile{max-width: 240px;}
+.wf-desktop{max-width: 100%;}
+
+.wf-row{
+    border: 1px solid #000;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: #000;
+}
+
+.wf-box{
+    border: 1px dashed #000;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #444;
+}
+
+.wf-hero{height: 60px ; display: flex; align-items: center; justify-content: center;}
+.wf-tall{height: 70px; display: flex; align-items: center; justify-content: center;}
+
+.wf-grid3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0.5rem;
+}
+
+/* footer */
+footer{
+    background: var(--charcoal);
+    color: var(--cream);
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media(max-width:480px){
+    .swatch-grid{
+        grid-template-columns: 1fr;
+    }
+}

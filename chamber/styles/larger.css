@@ -1,11 +1,11 @@
  /* larger.css enhancements for wider viewports */
 
 @media screen and (min-width: 700px) {
- 
+
   .header-inner { padding: 0 2rem; }
- 
+
   .hamburger { display: none; }
- 
+
   nav {
     display: flex;
     flex-direction: row;
@@ -15,20 +15,20 @@
     gap: 1.5rem;
     border-bottom: none;
   }
- 
+
   nav a { border-bottom: none; padding: 0.4rem 0.1rem; }
   nav a.active { border-bottom: 2px solid var(--gold); }
- 
+
   .page-band { padding: 2.25rem 2rem 1.75rem; }
- 
+
   .directory { padding: 1.5rem 2rem 3.5rem; }
- 
+
   .controls { padding: 0 2rem; }
- 
+
   .biz-grid { grid-template-columns: repeat(3, 1fr); }
- 
+
   .biz-list .biz-card { flex-direction: row; }
- 
+
   .footer-inner {
     flex-direction: row;
     align-items: center;
@@ -36,88 +36,87 @@
     text-align: left;
     padding: 1.5rem 2rem;
   }
- 
+
   .footer-socials { justify-content: flex-start; }
- 
+
   .footer-meta { text-align: right; }
- 
-  /* Home page */
+
+/* Home Page  */
   .hero-image { height: 480px; }
- 
+
   .hero-overlay { align-items: flex-start; justify-content: center; text-align: left; padding: 3rem; }
- 
+
   .hero-overlay h1 { font-size: 2.6rem; }
   .hero-overlay p { font-size: 1.05rem; max-width: 40ch; }
- 
+
   .events, .weather, .spotlights { padding: 2.5rem 2rem; }
- 
+
   .events-grid { grid-template-columns: repeat(3, 1fr); }
- 
+
   .weather-panel { flex-direction: row; align-items: stretch; }
- 
+
   .weather-current {
     flex: 1;
     border-right: 1px solid var(--border);
     padding-right: 1.5rem;
   }
- 
+
   .forecast-container {
     flex: 2;
     border-top: none;
     padding-top: 0;
   }
- 
+
   .spotlights-grid { grid-template-columns: repeat(3, 1fr); min-height: 260px; }
- 
-  /* Join Page */
+
+/* Join Page  */
   .join-layout {
     flex-direction: row;
     align-items: flex-start;
     padding: 2.5rem 2rem 4rem;
   }
- 
+
   .join-form {
     flex: 3;
   }
- 
+
   .membership-cards {
     flex: 2;
     grid-template-columns: repeat(2, 1fr);
     align-self: stretch;
   }
- 
+
   .thankyou-summary {
     padding: 2.5rem 2rem 4rem;
   }
 }
- 
+
 @media screen and (min-width: 900px) and (max-width: 1099px) {
   .biz-grid { grid-template-columns: repeat(2, 1fr); }
 }
- 
-/* Discover Page Large Screen (1025px+) */
+
+/*Discover Page Large screen (1025px+) ── */
 @media screen and (min-width: 1025px) {
   .discover-grid {
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
-    min-height: 1500px;
     grid-template-areas:
       "c1 c1 c2"
       "c1 c1 c3"
       "c4 c5 c6"
       "c7 c7 c8";
   }
- 
+
   .discover-card.card-1 {
     display: flex;
     flex-direction: column;
   }
- 
+
   .discover-card.card-1 figure {
     flex: 1;
     min-height: 220px;
   }
- 
+
   .discover-card.card-1 figure img {
     height: 100%;
     width: 100%;

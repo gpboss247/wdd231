@@ -5,6 +5,7 @@
 
   .discover-grid {
     grid-template-columns: 1fr 1fr;
+    min-height: auto;
     grid-template-areas:
       "c1 c1"
       "c2 c3"

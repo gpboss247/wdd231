@@ -41,7 +41,7 @@
 
   .footer-meta { text-align: right; }
 
-/* Home Page  */
+  /* Home Page */
   .hero-image { height: 480px; }
 
   .hero-overlay { align-items: flex-start; justify-content: center; text-align: left; padding: 3rem; }
@@ -69,7 +69,7 @@
 
   .spotlights-grid { grid-template-columns: repeat(3, 1fr); min-height: 260px; }
 
-/* Join Page  */
+  /* Join Page */
   .join-layout {
     flex-direction: row;
     align-items: flex-start;
@@ -95,11 +95,12 @@
   .biz-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/*Discover Page Large screen (1025px+) ── */
+/* Discover Page Large Screeen (1025px+) ── */
 @media screen and (min-width: 1025px) {
   .discover-grid {
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
+    min-height: auto;
     grid-template-areas:
       "c1 c1 c2"
       "c1 c1 c3"

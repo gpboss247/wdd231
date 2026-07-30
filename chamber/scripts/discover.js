@@ -1,6 +1,6 @@
 // discover.js
-// ES module imports the 8 items of interest and builds a card for
-// each, also handles the localStorage based last visit message.
+// ES module: imports the 8 items of interest and builds a card for
+// each, plus handles the localStorage-based last-visit message.
 
 import { discoverItems } from '../data/discover.mjs';
 
@@ -17,9 +17,15 @@ function buildCard(item, index) {
   const img = document.createElement('img');
   img.setAttribute('src', item.image);
   img.setAttribute('alt', item.name);
-  img.setAttribute('loading', 'lazy');
   img.setAttribute('width', '300');
   img.setAttribute('height', '200');
+
+  if (index === 0) {
+    // The first card is visible immediately on load
+    img.setAttribute('fetchpriority', 'high');
+  } else {
+    img.setAttribute('loading', 'lazy');
+  }
   figure.appendChild(img);
 
   const address = document.createElement('address');
@@ -49,7 +55,7 @@ discoverItems.forEach((item, index) => {
   cardContainer.appendChild(buildCard(item, index));
 });
 
-// Last VisitMessage LocalStorage 
+// Last Visit Message , LocalStorage 
 function displayVisitMessage() {
   const visitBanner = document.getElementById('visit-message');
   const now = Date.now();

@@ -1,4 +1,4 @@
-/* larger.css  enhancements for wider viewports */
+ /* larger.css enhancements for wider viewports */
 
 @media screen and (min-width: 700px) {
 
@@ -41,7 +41,7 @@
 
   .footer-meta { text-align: right; }
 
-  /* Home page */
+/* Homepage */
   .hero-image { height: 480px; }
 
   .hero-overlay { align-items: flex-start; justify-content: center; text-align: left; padding: 3rem; }
@@ -69,7 +69,7 @@
 
   .spotlights-grid { grid-template-columns: repeat(3, 1fr); min-height: 260px; }
 
-  /* Join Page */
+/* Join Page */
   .join-layout {
     flex-direction: row;
     align-items: flex-start;
@@ -93,4 +93,33 @@
 
 @media screen and (min-width: 900px) and (max-width: 1099px) {
   .biz-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Discover Page Larger Screen  (1025px+) */
+@media screen and (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    grid-template-areas:
+      "c1 c1 c2"
+      "c1 c1 c3"
+      "c4 c5 c6"
+      "c7 c7 c8";
+  }
+
+  .discover-card.card-1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .discover-card.card-1 figure {
+    flex: 1;
+    min-height: 220px;
+  }
+
+  .discover-card.card-1 figure img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }

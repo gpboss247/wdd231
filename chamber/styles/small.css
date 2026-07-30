@@ -1,7 +1,5 @@
-/* ============================================
-   small.css — base / mobile-first styles (320px+)
-   Shared across all Chamber project pages.
-   ============================================ */
+/* small.css — base / mobile-first styles (320px+) */
+  
 
 :root {
   --green:      #0A5C36;
@@ -14,6 +12,13 @@
   --muted:      #5C6570;
   --border:     #DDD7C9;
   --accent:     #0A5C36;
+
+  --badge-gold-bg:   #FEF3C7;
+  --badge-gold-text: #92400E;
+  --badge-silver-bg:   #F1F5F9;
+  --badge-silver-text: #475569;
+  --badge-member-bg:   #ECFDF5;
+  --badge-member-text: #065F46;
 
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
@@ -51,7 +56,7 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
-/* ── HEADER ── */
+/* Header  */
 header {
   background: var(--green-dark);
   border-bottom: 3px solid var(--gold);
@@ -103,7 +108,7 @@ header {
   text-transform: uppercase;
 }
 
-/* Header actions (theme toggle + hamburger) */
+/* Header action , theme toggle and hambuger  */
 .header-actions {
   display: flex;
   align-items: center;
@@ -134,7 +139,7 @@ header {
 html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
-/* Hamburger */
+/* Hamburger  */
 .hamburger {
   width: 32px;
   height: 28px;
@@ -158,7 +163,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
 
-/* Nav (mobile dropdown) */
+/* Nav Mobile dropdown  */
 nav {
   display: none;
   flex-direction: column;
@@ -192,7 +197,7 @@ nav a.active {
   border-bottom: 2px solid var(--gold);
 }
 
-/* ── PAGE TITLE BAND ── */
+/* Page Title Band */
 .page-band {
   background-color: var(--green);
   background-image: linear-gradient(135deg, var(--green) 0%, #0d7a47 100%);
@@ -212,13 +217,13 @@ nav a.active {
   font-size: 0.88rem;
 }
 
-/* ── MAIN ── */
+/* Main  */
 main {
   flex: 1;
   width: 100%;
 }
 
-/* ── DIRECTORY CONTROLS ── */
+/* Directory Controls  */
 .controls {
   max-width: 1200px;
   margin: 1.5rem auto 0;
@@ -255,7 +260,7 @@ main {
   font-family: var(--font-mono);
 }
 
-/* ── DIRECTORY GRID / LIST ── */
+/* Directory Grid List  */
 .directory {
   max-width: 1200px;
   margin: 0 auto;
@@ -341,9 +346,9 @@ main {
   display: inline-block;
 }
 
-.level-3 { background: #FEF3C7; color: #92400E; } /* gold */
-.level-2 { background: #F1F5F9; color: #475569; } /* silver */
-.level-1 { background: #ECFDF5; color: #065F46; } /* member */
+.level-3 { background: var(--badge-gold-bg); color: var(--badge-gold-text); } /* gold */
+.level-2 { background: var(--badge-silver-bg); color: var(--badge-silver-text); } /* silver */
+.level-1 { background: var(--badge-member-bg); color: var(--badge-member-text); } /* member */
 
 .biz-info {
   display: flex;
@@ -359,7 +364,7 @@ main {
 .info-row { display: flex; align-items: flex-start; gap: 0.4rem; }
 .info-row .icon { flex-shrink: 0; width: 14px; text-align: center; font-family: var(--font-mono); }
 
-/* List view variant */
+/* List View Variant  */
 .biz-list .biz-card {
   flex-direction: row;
   align-items: center;
@@ -375,7 +380,7 @@ main {
 
 .biz-list .card-top { flex: 1 1 220px; }
 
-/* ── HOME: HERO ── */
+/* Home Hero  */
 .hero {
   position: relative;
   overflow: hidden;
@@ -431,7 +436,7 @@ main {
   transform: translateY(-2px);
 }
 
-/* ── HOME: SHARED SECTION WRAPPER ── */
+/* Home Shared Sections  */
 .events, .weather, .spotlights {
   max-width: 1200px;
   margin: 0 auto;
@@ -444,7 +449,7 @@ main {
   margin-bottom: 1rem;
 }
 
-/* ── HOME: EVENTS ── */
+/* Home Events  */
 .events-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -482,7 +487,7 @@ main {
   color: var(--muted);
 }
 
-/* ── HOME: WEATHER ── */
+/* Home Weather */
 .weather-panel {
   background: var(--card);
   border: 1.5px solid var(--border);
@@ -558,7 +563,7 @@ main {
   color: var(--muted);
 }
 
-/* ── HOME: SPOTLIGHTS ── */
+/* Home Spotlight  */
 .spotlights-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -607,7 +612,7 @@ main {
 
 .spotlight-link:hover { text-decoration: underline; }
 
-/* ── FOOTER ── */
+/* Footer  */
 footer {
   background: var(--green-dark);
   color: rgba(255,255,255,0.75);
@@ -648,7 +653,7 @@ footer {
 
 .footer-meta span { color: #fff; }
 
-/* ── JOIN PAGE: LAYOUT ── */
+/* Join Page , Layout */
 .join-layout {
   max-width: 1200px;
   margin: 0 auto;
@@ -658,7 +663,7 @@ footer {
   gap: 2rem;
 }
 
-/* ── JOIN PAGE: FORM ── */
+/* Join Page, Form  */
 .join-form {
   background: var(--card);
   border: 1.5px solid var(--border);
@@ -725,7 +730,7 @@ footer {
   transform: translateY(-2px);
 }
 
-/* ── JOIN PAGE: MEMBERSHIP CARDS ── */
+/* Join Page , Membership Card */
 .membership-cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -792,7 +797,7 @@ footer {
   border-color: var(--green);
 }
 
-/* ── Join Page-- benefit Modals ── */
+/* Join page, Benefit Modal */
 .benefits-modal {
   border: 1px solid rgb(0 0 0 / 10%);
   border-radius: var(--radius);
@@ -856,7 +861,7 @@ footer {
   border-color: var(--green);
 }
 
-/* ── Thank You Page ── */
+/* Thank You Page */
 .thankyou-summary {
   max-width: 700px;
   margin: 0 auto;
@@ -896,7 +901,7 @@ footer {
   margin: 0.15rem 0 0;
 }
 
-/* ── Reduced Motion ── */
+/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   .membership-card {
     animation: none;
@@ -905,5 +910,145 @@ footer {
   }
 }
 
-/* ── Utility ── */
+/* Discover page */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.visit-banner {
+  max-width: 1200px;
+  margin: 1.25rem auto 0;
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.visit-banner p {
+  background: var(--card);
+  border: 1.5px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 0.75rem 1.1rem;
+  font-size: 0.88rem;
+  color: var(--text);
+  flex: 1;
+}
+
+.visit-banner button {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  color: var(--muted);
+  transition: background 0.2s, color 0.2s;
+}
+
+.visit-banner button:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+.discover-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.discover-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "c1"
+    "c2"
+    "c3"
+    "c4"
+    "c5"
+    "c6"
+    "c7"
+    "c8";
+  gap: 1.1rem;
+}
+
+.discover-card {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: background-color 0.25s ease, border-color 0.2s ease;
+}
+
+.discover-card h2 {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.discover-card figure {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 3 / 2;
+}
+
+.discover-card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.discover-card address {
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+}
+
+.discover-card p {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.discover-card button {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: 20px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.discover-card button:hover {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.card-1 { grid-area: c1; }
+.card-2 { grid-area: c2; }
+.card-3 { grid-area: c3; }
+.card-4 { grid-area: c4; }
+.card-5 { grid-area: c5; }
+.card-6 { grid-area: c6; }
+.card-7 { grid-area: c7; }
+.card-8 { grid-area: c8; }
+
+/* utility */
 .hidden { display: none !important; }

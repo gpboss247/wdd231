@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChopLagos | Lagos Street Food &amp; Local Dishes Guide</title>
+  <meta name="description" content="ChopLagos is a guide to Lagos street food and local dishes, helping you discover what to eat, where to find it, and how spicy it is.">
+  <meta name="author" content="Onaimor Godspower">
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <meta property="og:title" content="ChopLagos | Lagos Street Food Guide">
+  <meta property="og:description" content="Discover popular Lagos street food and local dishes, filterable by spice level and region.">
+  <meta property="og:image" content="https://gpboss247.github.io/wdd231/final/images/og-image.png">
+  <meta property="og:url" content="https://gpboss247.github.io/wdd231/final/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=optional" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-group">
+        <img src="images/logo.png" alt="ChopLagos logo" width="38" height="38">
+        <span class="site-name">ChopLagos</span>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="dishes.html">Explore Dishes</a>
+        <a href="submit.html">Submit a Dish</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Lagos street food scene" class="hero-image" width="1200" height="440" fetchpriority="high">
+      <div class="hero-overlay">
+        <h1>Eat Your Way Through Lagos</h1>
+        <p>A guide to the street food and local dishes that make up the real taste of the city.</p>
+        <a href="dishes.html" class="cta-button">Explore Dishes</a>
+        <a href="submit.html" class="cta-button-outline">Suggest a Dish</a>
+      </div>
+    </section>
+
+    <section class="home-section" aria-labelledby="about-heading">
+      <h2 id="about-heading">What is ChopLagos?</h2>
+      <p>
+        "Chop" is Nigerian Pidgin for "to eat." ChopLagos is a guide to the street food and local
+        dishes found across Lagos &mdash; what they are, where they're commonly sold, how spicy they
+        are, and roughly what they cost. Whether you're visiting for the first time or you've lived
+        here your whole life, there's always another dish worth trying.
+      </p>
+    </section>
+
+    <section class="home-section" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">A Few Favorites</h2>
+      <p>A small taste of what's waiting for you on the full dish guide.</p>
+      <div class="featured-grid">
+        <div class="featured-card">
+          <img src="images/dishes/jollof-rice.webp" alt="Jollof Rice" loading="lazy" width="320" height="220">
+          <div class="featured-card-body">
+            <h3>Jollof Rice</h3>
+            <p>Nigeria's most famous export &mdash; a rich, smoky tomato rice dish found in nearly every part of Lagos State.</p>
+          </div>
+        </div>
+        <div class="featured-card">
+          <img src="images/dishes/suya.webp" alt="Suya" loading="lazy" width="320" height="220">
+          <div class="featured-card-body">
+            <h3>Suya</h3>
+            <p>Spiced grilled skewers sold after dark, best found around Obalende, Yaba and most part of the Lagos Island.</p>
+          </div>
+        </div>
+        <div class="featured-card">
+          <img src="images/dishes/puff-puff.webp" alt="Puff-Puff" loading="lazy" width="320" height="220">
+          <div class="featured-card-body">
+            <h3>Puff-Puff</h3>
+            <p>Sweet, fluffy fried dough &mdash; a snack you'll find on nearly every street corner.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="about-band">
+      <div class="about-band-inner">
+        <h2>Have a Dish We're Missing?</h2>
+        <p>ChopLagos grows with help from people who actually know the food. Suggest a dish, rate one you've tried, or just tell us where to find the best version of it.</p>
+        <a href="submit.html" class="cta-button">Submit a Dish</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="attributions.html">Attributions</a>
+        <a href="https://www.loom.com/share/my-video-id" target="_blank" rel="noopener">Project Video</a>
+      </div>
+      <div class="footer-meta">
+        ChopLagos &middot; WDD 231 Final Project &middot; <span>Onaimor Godspower</span><br>
+        &copy; <span id="currentyear"></span> ChopLagos &middot; <span id="lastModified"></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

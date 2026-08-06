@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Dish | ChopLagos</title>
+  <meta name="description" content="Suggest a Lagos street food dish or local dish for the ChopLagos guide.">
+  <meta name="author" content="Onaimor Godspower">
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <meta property="og:title" content="Submit a Dish | ChopLagos">
+  <meta property="og:description" content="Suggest a Lagos street food dish or local dish for the ChopLagos guide.">
+  <meta property="og:image" content="https://gpboss247.github.io/wdd231/final/images/og-image.png">
+  <meta property="og:url" content="https://gpboss247.github.io/wdd231/final/submit.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=optional" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script type="module" src="scripts/submit.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-group">
+        <img src="images/logo.png" alt="ChopLagos logo" width="38" height="38">
+        <span class="site-name">ChopLagos</span>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav">
+        <a href="index.html">Home</a>
+        <a href="dishes.html">Explore Dishes</a>
+        <a href="submit.html" class="active">Submit a Dish</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-band">
+    <h1>Submit a Dish</h1>
+    <p>Know a dish we're missing? Tell us about it.</p>
+  </div>
+
+  <main>
+    <div class="submit-form">
+      <form action="thankyou.html" method="get">
+
+        <label for="submitter-name">Your Name
+          <input type="text" id="submitter-name" name="submittername" title="Enter your name" autocomplete="name" required>
+        </label>
+
+        <label for="submitter-email">Your Email
+          <input type="email" id="submitter-email" name="submitteremail" title="Enter a valid email address" autocomplete="email" placeholder="e.g. yourname@email.com" required>
+        </label>
+
+        <label for="dish-name">Dish Name
+          <input type="text" id="dish-name" name="dishname" title="Enter the dish name" required>
+        </label>
+
+        <label for="region">Where is it commonly found?
+          <input type="text" id="region" name="region" title="Enter the area or neighborhood">
+        </label>
+
+        <label for="spice-level">Spice Level
+          <select id="spice-level" name="spicelevel" title="Select a spice level" required>
+            <option value="" disabled selected>Select a level</option>
+            <option value="mild">Mild</option>
+            <option value="hot">Hot</option>
+            <option value="veryhot">Very Hot</option>
+          </select>
+        </label>
+
+        <label for="price-range">Estimated Price Range
+          <input type="text" id="price-range" name="pricerange" title="e.g. ₦500 – ₦1,500" placeholder="e.g. ₦500 – ₦1,500">
+        </label>
+
+        <label for="dish-description">Tell us about it
+          <textarea id="dish-description" name="dishdescription" title="Describe the dish" rows="4"></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <button type="submit">Submit Suggestion</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="attributions.html">Attributions</a>
+        <a href="https://www.loom.com/share/my-video-id" target="_blank" rel="noopener">Project Video</a>
+      </div>
+      <div class="footer-meta">
+        ChopLagos &middot; WDD 231 Final Project &middot; <span>Onaimor Godspower</span><br>
+        &copy; <span id="currentyear"></span> ChopLagos &middot; <span id="lastModified"></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

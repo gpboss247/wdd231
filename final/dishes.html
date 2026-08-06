@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Dishes | ChopLagos</title>
+  <meta name="description" content="Browse Lagos street food and local dishes, filterable by spice level, with details on region and price.">
+  <meta name="author" content="Onaimor Godspower">
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <meta property="og:title" content="Explore Dishes | ChopLagos">
+  <meta property="og:description" content="Browse Lagos street food and local dishes, filterable by spice level, with details on region and price.">
+  <meta property="og:image" content="https://gpboss247.github.io/wdd231/final/images/og-image.png">
+  <meta property="og:url" content="https://gpboss247.github.io/wdd231/final/dishes.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=optional" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script type="module" src="scripts/dishes.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-group">
+        <img src="images/logo.png" alt="ChopLagos logo" width="38" height="38">
+        <span class="site-name">ChopLagos</span>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav">
+        <a href="index.html">Home</a>
+        <a href="dishes.html" class="active">Explore Dishes</a>
+        <a href="submit.html">Submit a Dish</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-band">
+    <h1>Explore Dishes</h1>
+    <p>18 Lagos street foods and local dishes, filterable by spice level</p>
+  </div>
+
+  <main>
+    <div class="dish-controls">
+      <div class="spice-filter" role="group" aria-label="Filter dishes by spice level">
+        <button type="button" class="active" data-spice="all">All</button>
+        <button type="button" data-spice="Mild">Mild</button>
+        <button type="button" data-spice="Hot">Hot</button>
+        <button type="button" data-spice="Very Hot">Very Hot</button>
+        <button type="button" id="favorites-toggle" class="favorites-toggle-btn">&#9734; Show Favorites Only</button>
+      </div>
+      <div class="dish-result-row">
+        <span id="dish-result-count"></span>
+      </div>
+    </div>
+
+    <section class="dish-section" aria-label="Dish list">
+      <div class="dish-grid" id="dish-grid"></div>
+    </section>
+
+    <dialog id="dish-modal"></dialog>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="attributions.html">Attributions</a>
+        <a href="https://www.loom.com/share/my-video-id" target="_blank" rel="noopener">Project Video</a>
+      </div>
+      <div class="footer-meta">
+        ChopLagos &middot; WDD 231 Final Project &middot; <span>Onaimor Godspower</span><br>
+        &copy; <span id="currentyear"></span> ChopLagos &middot; <span id="lastModified"></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

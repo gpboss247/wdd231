@@ -1,0 +1,49 @@
+/* larger.css, enhancements for wider viewports */
+
+@media screen and (min-width: 700px) {
+
+  .header-inner { padding: 0 2rem; }
+
+  .hamburger { display: none; }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    padding: 0;
+    gap: 1.5rem;
+    border-bottom: none;
+  }
+
+  nav a { border-bottom: none; padding: 0.4rem 0.1rem; }
+  nav a.active { border-bottom: 2px solid var(--gold); }
+
+  .page-band { padding: 2.25rem 2rem 1.75rem; }
+
+  .hero-image { height: 440px; }
+  .hero-overlay { align-items: flex-start; text-align: left; padding: 3rem; }
+  .hero-overlay h1 { font-size: 2.7rem; }
+  .hero-overlay p { font-size: 1.05rem; }
+
+  .home-section { padding: 3rem 2rem; }
+  .featured-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .dish-controls { padding: 0 2rem; }
+  .dish-section { padding: 1.5rem 2rem 4rem; }
+  .dish-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .submit-form, .thankyou-summary { padding: 3rem 2rem 4rem; }
+
+  .footer-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dish-grid { grid-template-columns: repeat(4, 1fr); }
+}

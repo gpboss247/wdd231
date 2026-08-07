@@ -65,15 +65,6 @@
     },
     {
       "id": 8,
-      "name": "Nkwobi",
-      "region": "Surulere, Mainland",
-      "spiceLevel": "Hot",
-      "priceRange": "₦1,500 – ₦3,500",
-      "description": "Spiced cow foot simmered in a thick palm oil and pepper sauce, garnished with utazi leaves and served in a wooden bowl. A beloved evening delicacy.",
-      "image": "images/dishes/nkwobi.webp"
-    },
-    {
-      "id": 9,
       "name": "Pepper Soup",
       "region": "Everywhere",
       "spiceLevel": "Very Hot",
@@ -82,7 +73,7 @@
       "image": "images/dishes/pepper-soup.webp"
     },
     {
-      "id": 10,
+      "id": 9,
       "name": "Ewa Agoyin",
       "region": "Ojuelegba, Mainland",
       "spiceLevel": "Hot",
@@ -91,7 +82,7 @@
       "image": "images/dishes/ewa-agoyin.webp"
     },
     {
-      "id": 11,
+      "id": 10,
       "name": "Shawarma",
       "region": "Lekki, VI, Ikeja",
       "spiceLevel": "Mild",
@@ -100,7 +91,7 @@
       "image": "images/dishes/shawarma.webp"
     },
     {
-      "id": 12,
+      "id": 11,
       "name": "Chin Chin",
       "region": "Everywhere",
       "spiceLevel": "Mild",
@@ -109,7 +100,7 @@
       "image": "images/dishes/chin-chin.webp"
     },
     {
-      "id": 13,
+      "id": 12,
       "name": "Kilishi",
       "region": "Mainland markets",
       "spiceLevel": "Hot",
@@ -118,7 +109,7 @@
       "image": "images/dishes/kilishi.webp"
     },
     {
-      "id": 14,
+      "id": 13,
       "name": "Isi Ewu",
       "region": "Surulere, Mainland",
       "spiceLevel": "Very Hot",
@@ -127,7 +118,7 @@
       "image": "images/dishes/isi-ewu.webp"
     },
     {
-      "id": 15,
+      "id": 14,
       "name": "Meat Pie",
       "region": "Everywhere",
       "spiceLevel": "Mild",
@@ -136,7 +127,7 @@
       "image": "images/dishes/meat-pie.webp"
     },
     {
-      "id": 16,
+      "id": 15,
       "name": "Zobo",
       "region": "Everywhere",
       "spiceLevel": "Mild",
@@ -145,7 +136,7 @@
       "image": "images/dishes/zobo.webp"
     },
     {
-      "id": 17,
+      "id": 16,
       "name": "Gizdodo",
       "region": "Lekki, Victoria Island",
       "spiceLevel": "Hot",
@@ -154,7 +145,7 @@
       "image": "images/dishes/gizdodo.webp"
     },
     {
-      "id": 18,
+      "id": 17,
       "name": "Small Chops",
       "region": "Island (events & vendors)",
       "spiceLevel": "Mild",

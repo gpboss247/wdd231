@@ -2,11 +2,7 @@
 // imports openDishModal and calls it whenever a card is clicked.
 
 const modal = document.getElementById('dish-modal');
-const closeButton = document.getElementById('closeDishModal');
 
-closeButton.addEventListener('click', () => {
-  modal.close();
-});
 
 modal.addEventListener('click', (event) => {
   const modalBounds = modal.getBoundingClientRect();

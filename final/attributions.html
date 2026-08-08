@@ -6,12 +6,55 @@
   <title>Attributions | ChopLagos</title>
   <meta name="description" content="Attributions and content sources for the ChopLagos website.">
   <meta name="author" content="Onaimor Godspower">
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <meta property="og:title" content="Attributions | ChopLagos">
+  <meta property="og:description" content="Sources and attributions for content, fonts, and images used across the ChopLagos website.">
+  <meta property="og:image" content="https://gpboss247.github.io/wdd231/final/images/og-image.webp">
+  <meta property="og:url" content="https://gpboss247.github.io/wdd231/final/attributions.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=optional" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
 </head>
 <body>
 
+  <header>
+    <div class="header-inner">
+      <div class="logo-group">
+        <img src="images/logo.png" alt="ChopLagos logo" width="38" height="38">
+        <span class="site-name">ChopLagos</span>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav">
+        <a href="index.html">Home</a>
+        <a href="dishes.html">Explore Dishes</a>
+        <a href="submit.html">Submit a Dish</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-band">
+    <h1>Attributions</h1>
+    <p>Sources for content, fonts, and images used on this site</p>
+  </div>
+
   <main>
 
-  <h1>Attributions</h1>
   <p>This page lists the sources of content, fonts, and images used in the ChopLagos website.</p>
 
   <h2>Fonts</h2>
@@ -70,9 +113,20 @@
     any external source.
   </p>
 
-  <p><a href="index.html">&larr; Back to ChopLagos</a></p>
-
   </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">&larr; Back to ChopLagos</a>
+        <a href="https://www.loom.com/share/REPLACE-WITH-YOUR-VIDEO-ID" target="_blank" rel="noopener">Project Video</a>
+      </div>
+      <div class="footer-meta">
+        ChopLagos &middot; WDD 231 Final Project &middot; <span>Onaimor Godspower</span><br>
+        &copy; <span id="currentyear"></span> ChopLagos &middot; <span id="lastModified"></span>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

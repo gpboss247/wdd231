@@ -44,17 +44,20 @@
       <nav id="primary-nav">
         <a href="index.html">Home</a>
         <a href="dishes.html">Explore Dishes</a>
-        <a href="submit.html" class="active">Submit a Dish</a>
+        <a href="submit.html" class="is-active">Submit a Dish</a>
       </nav>
     </div>
   </header>
 
-  <div class="page-band">
+
+
+  <main>
+
+    <div class="page-band">
     <h1>Submit a Dish</h1>
     <p>Know a dish we're missing? Tell us about it.</p>
   </div>
-
-  <main>
+  
     <div class="submit-form">
       <form action="thankyou.html" method="get">
 
@@ -91,7 +94,7 @@
           <textarea id="dish-description" name="dishdescription" title="Describe the dish" rows="4"></textarea>
         </label>
 
-        <input type="hidden" name="timestamp" id="timestamp">
+        <input type="is-hidden" name="timestamp" id="timestamp">
 
         <button type="submit">Submit Suggestion</button>
       </form>

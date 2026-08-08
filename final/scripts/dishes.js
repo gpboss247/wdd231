@@ -122,7 +122,7 @@ function handleFavoriteClick(dishId, button) {
   }
 
   // If currently viewing "favorites only" and a dish was just removed,
-  // refresh the list so it disappears immediately.
+  // it refreshes the list so it disappears immediately.
   if (showFavoritesOnly && !nowSaved) {
     renderDishes();
   }
@@ -130,8 +130,8 @@ function handleFavoriteClick(dishId, button) {
 
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    filterButtons.forEach((b) => b.classList.remove('active'));
-    button.classList.add('active');
+    filterButtons.forEach((b) => b.classList.remove('is-active'));
+    button.classList.add('is-active');
     activeSpiceFilter = button.dataset.spice;
     renderDishes();
   });
@@ -139,7 +139,7 @@ filterButtons.forEach((button) => {
 
 favoritesToggle.addEventListener('click', () => {
   showFavoritesOnly = !showFavoritesOnly;
-  favoritesToggle.classList.toggle('active', showFavoritesOnly);
+  favoritesToggle.classList.toggle('is-active', showFavoritesOnly);
   favoritesToggle.textContent = showFavoritesOnly ? '★ Showing Favorites' : '☆ Show Favorites Only';
   renderDishes();
 });
